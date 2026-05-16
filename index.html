@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Simulador Segunda Ley de Newton</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="contenedor">
+
+    <h1>⚡ Simulador - Segunda Ley de Newton</h1>
+
+    <div class="panel">
+
+      <!-- CONTROL FUERZA -->
+      <div class="control">
+
+        <label>Fuerza (N)</label>
+        <br><br>
+
+        <input
+          type="range"
+          id="fuerza"
+          min="100"
+          max="5000"
+          value="2000"
+        >
+
+        <br>
+
+        <span id="valorF">2000 N</span>
+
+      </div>
+
+      <!-- CONTROL MASA -->
+      <div class="control">
+
+        <label>Masa (kg)</label>
+        <br><br>
+
+        <input
+          type="range"
+          id="masa"
+          min="100"
+          max="3000"
+          value="1000"
+        >
+
+        <br>
+
+        <span id="valorM">1000 kg</span>
+
+      </div>
+
+      <!-- BOTONES -->
+      <div class="botones">
+
+        <button onclick="iniciarSimulacion()">
+          ▶ INICIAR SIMULACIÓN
+        </button>
+
+        <button onclick="pausarSimulacion()">
+          ⏸ PAUSAR / CONTINUAR
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- RESULTADOS -->
+    <div class="resultados">
+
+      <div class="card">
+
+        <h2>Fuerza</h2>
+
+        <p id="fuerzaTexto">2000 N</p>
+
+      </div>
+
+      <div class="card">
+
+        <h2>Masa</h2>
+
+        <p id="masaTexto">1000 kg</p>
+
+      </div>
+
+      <div class="card">
+
+        <h2>Aceleración</h2>
+
+        <p id="aceleracionTexto">0 m/s²</p>
+
+      </div>
+
+    </div>
+
+    <!-- ESCENARIO -->
+    <div class="escenario">
+
+      <div class="carretera"></div>
+
+      <!-- CARRO -->
+      <div class="carro" id="carro">
+
+        <div class="ventana"></div>
+
+        <div class="llanta llanta1"></div>
+
+        <div class="llanta llanta2"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
